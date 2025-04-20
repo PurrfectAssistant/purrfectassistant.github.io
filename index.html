@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Assistant - Your Cat's Digital Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes catPaw {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
+
+        .cat-paw-hover:hover {
+            animation: catPaw 0.5s ease-in-out;
+        }
+
+        body {
+            background-color: #96bfe9;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #e1fffd, #96bfe9);
+        }
+
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #3B82F6, #93C5FD);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .testimonial-card:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 gradient-bg">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-blue-900 mb-4 animate-bounce">
+                Purrfect Assistant
+            </h1>
+            <p class="text-xl text-blue-800 max-w-2xl mx-auto">
+                Your One-Stop Digital Companion for Cat Care
+            </p>
+        </header>
+
+        <!-- Main Features Section -->
+        <section class="grid md:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+
+            <!-- 
+                AI-powered personalized diet and care plans with diet tracking
+                Cat breed detection through image analysis
+                Symptom-based disease prediction and vet suggestions
+                Specialized care for newborn, pregnant, or rescued cats
+                GPS tracking for real-time location monitoring
+                Training and grooming guidance
+                A chatbot for instant cat care assistance 
+            -->
+            <!-- AI Diet Recommendations -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">🍽️</div>
+                <h2 class="text-xl font-semibold mb-2">AI Diet Recommendations</h2>
+                <p class="text-gray-700">Personalized nutrition plans tailored to your cat's unique needs.</p>
+            </div>
+
+            <!-- Health Monitoring -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">❤️</div>
+                <h2 class="text-xl font-semibold mb-2">Health Monitoring</h2>
+                <p class="text-gray-700">Track your cat's health with virtual vet guidance.</p>
+            </div>
+
+            <!-- GPS Tracking -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">📍</div>
+                <h2 class="text-xl font-semibold mb-2">GPS Tracking</h2>
+                <p class="text-gray-700">Real-time location tracking for outdoor cats.</p>
+            </div>
+
+            <!-- Breed Detection -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">🐱</div>
+                <h2 class="text-xl font-semibold mb-2">Breed Detection</h2>
+                <p class="text-gray-700">Identify your cat's breed with our advanced image analysis.</p>
+            </div>
+
+            <!-- Symptom Checker -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">🩺</div>
+                <h2 class="text-xl font-semibold mb-2">Symptom Checker</h2>
+                <p class="text-gray-700">Get instant vet suggestions based on symptoms.</p>
+            </div>
+
+            <!-- Training & Grooming Guidance -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">✂️</div>
+                <h2 class="text-xl font-semibold mb-2">Training & Grooming Guidance</h2>
+                <p class="text-gray-700">Expert tips for
+                    training and grooming your cat.</p>
+            </div>
+
+            <!-- Newborn & Pregnant Cat Care -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">👶</div>
+                <h2 class="text-xl font-semibold mb-2">Newborn & Pregnant Cat Care</h2>
+                <p class="text-gray-700">Specialized care for newborns and pregnant cats.</p>
+            </div>
+
+            <!-- Chatbot Assistance -->
+            <div class="feature-card p-6 rounded-xl shadow-md text-center">
+                <div class="text-4xl mb-4">💬</div>
+                <h2 class="text-xl font-semibold mb-2">Chatbot Assistance</h2>
+                <p class="text-gray-700">24/7 support for all your cat care questions.</p>
+            </div>
+
+
+
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-blue-900">What Cat Owners Are Saying</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-xl shadow-md relative">
+                    <p class="italic mb-4">"Purrfect Assistant has completely transformed how I care for my cat. The AI
+                        diet recommendations are spot on!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-300 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Ayesha M.</h3>
+                            <p class="text-sm text-gray-600">Cat Mom of Whiskers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-xl shadow-md relative">
+                    <p class="italic mb-4">"The GPS tracking gives me peace of mind when my adventurous cat goes
+                        outside. Absolutely love it!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-300 rounded-full mr-4"> <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg> </div>
+                        <div>
+                            <h3 class="font-semibold">M. Ali</h3>
+                            <p class="text-sm text-gray-600">Cat Dad of Luna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-xl shadow-md relative">
+                    <p class="italic mb-4">"The AI chatbot is like having a cat expert in my pocket. So helpful for a
+                        new cat owner!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-300 rounded-full mr-4"> <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg> </div>
+                        <div>
+                            <h3 class="font-semibold">Hamza S.</h3>
+                            <p class="text-sm text-gray-600">Cat Parent of Oreo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="mt-16 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">Why Purrfect Assistant?</h2>
+            <p class="max-w-3xl mx-auto text-lg text-blue-800 leading-relaxed">
+                Purrfect Assistant is more than just an app. It's a comprehensive digital companion
+                that combines AI-powered features to enhance your cat's well-being. From personalized
+                diet plans to breed identification and training support, we're revolutionizing
+                cat care technology.
+            </p>
+        </section>
+
+        <!-- Waitlist Section -->
+        <section class="mt-12 text-center mb-16 max-w-md mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-blue-900">Join Our Waitlist</h2>
+            <div class="mb-6">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full px-4 py-3 rounded-full border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+            </div>
+            <button class="cat-paw-hover bg-blue-600 text-white px-8 py-3 rounded-full 
+                           text-xl font-bold hover:bg-blue-700 transition duration-300 
+                           transform hover:scale-105 shadow-lg">
+                Join Waitlist
+            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-blue-900">
+            <p>© 2025 Purrfect Assistant. All Rights Meowed.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Interactive elements
+        document.querySelectorAll('.feature-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple email validation
+        const emailInput = document.querySelector('input[type="email"]');
+        const joinButton = document.querySelector('button');
+
+        joinButton.addEventListener('click', () => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailRegex.test(emailInput.value)) {
+                alert('Thank you for joining our waitlist!');
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address');
+            }
+        });
+    </script>
+</body>
+
+</html>
